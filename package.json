@@ -1,0 +1,31 @@
+{
+  "name": "turnin-core",
+  "version": "1.0.0",
+  "description": "A C++ assignment grading program.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node -r esm src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradenn/turnin-core.git"
+  },
+  "keywords": [
+    "c++",
+    "turnin",
+    "node",
+    "express"
+  ],
+  "author": "Braden Nicholson",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/bradenn/turnin-core/issues"
+  },
+  "homepage": "https://github.com/bradenn/turnin-core#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  }
+}
