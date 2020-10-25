@@ -1,4 +1,5 @@
 import bodyParser from 'body-parser';
+import express from "express";
 
 export default app => {
 
@@ -10,6 +11,9 @@ export default app => {
     /* Allow the API to receive JSON */
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true, limit: '5mb'}));
+    app.use(express.static('public'))
+
+    app.set('view engine', 'ejs');
 
     /* Helps with reverse proxy */
     app.enable('trust proxy');

@@ -3,7 +3,7 @@ import routes from '../routes';
 export default app => {
 
     /* Define endpoint prefix */
-    app.use('/api/v1', routes);
+    app.use('/', routes);
 
     /* Catch all unhandled requests */
     app.use((req, res, next) => {

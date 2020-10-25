@@ -24,10 +24,14 @@
   },
   "homepage": "https://github.com/bradenn/turnin-core#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "mongoose": "^5.10.10",
     "performance-now": "^2.1.0",
     "winston": "^3.3.3"

@@ -1,5 +1,7 @@
 import course from './course';
+import user from './user';
 
 export {
-    course as courseService
+    course as courseService,
+    user as userService
 }
