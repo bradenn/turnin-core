@@ -7,13 +7,13 @@ let router = Router();
 
 router.get('/',
     async (req, res) => {
-        if(req.session){
-            if(typeof req.session.error !== 'undefined'){
-                res.locals.error = req.session.error;
-            }
+    if(req.session){
+        if(typeof req.session.error !== 'undefined'){
+            res.locals.error = req.session.error;
         }
-        req.session.error = null;
-        return res.render('login');
+    }
+    req.session.error = null;
+            return res.render('login');
     });
 
 router.post('/', authValidator.validateLogin,

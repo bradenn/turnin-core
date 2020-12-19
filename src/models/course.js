@@ -1,18 +1,21 @@
 import mongoose from "mongoose";
 
 const courseSchema = mongoose.Schema({
-    name: {
+    courseName: {
         type: String,
         required: true
     },
-    section: {
+    courseSection: {
         type: Number,
-        required: true
     },
-    instructor: mongoose.ObjectId,
-    code: String,
-    locked: Boolean,
-    dateEdited: {type: Date, default: Date.now},
+    courseInstructor: {
+        type: mongoose.ObjectId,
+        ref: "User"
+    },
+    courseIsLocked: {
+        type: Boolean,
+        default: false
+    },
     dateCreated: {type: Date, default: Date.now}
 });
 

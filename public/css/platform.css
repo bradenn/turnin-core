@@ -1,0 +1,67 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    /* Primary Colors */
+
+    /* Background Color */
+    --bg: hsl(210, 11%, 15%);
+    /* Border Color */
+    --bd: hsl(210, 4%, 29%);
+    /* Foreground Color */
+    --fg: hsl(210, 9%, 17%);
+
+    /* Accent Color */
+    --hue-1: hsl(36, 100%, 53%);
+    --hue-1-2: hsla(36, 100%, 53%, 0.15);
+    /* Success Color */
+    --hue-2: hsl(135, 64%, 50%);
+    --hue-2-2: hsla(135, 64%, 50%, 0.15);
+    /* Danger Color */
+    --hue-3: hsl(3, 100%, 61%);
+    --hue-3-2: hsla(3, 100%, 61%, 0.15);
+
+    /* Monotone Colors */
+    --mono-1: hsl(210, 14%, 71%);
+    --mono-2: hsl(210, 9%, 55%);
+    --mono-3: hsl(210, 10%, 40%);
+
+    --box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.03), 1px 2px 3px rgba(0, 0, 0, 0.02);
+    --border-radius: 8px;
+
+    font-family: sans-serif;
+    line-height: 1.15;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--mono-1);
+    font-family: Roboto, sans-serif;
+}
+
+div.container {
+
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    height: 48px;
+    padding: 0 1em 0 1em;
+    margin-bottom: 1em;
+    align-items: center;
+
+    background-color: var(--fg);
+    border-bottom: 1px solid var(--bd);
+    box-shadow: var(--box-shadow);
+}
+
+nav > h2 {
+
+}
+
+

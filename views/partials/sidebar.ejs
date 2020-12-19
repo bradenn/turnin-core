@@ -1,0 +1,56 @@
+<%
+let isActive = (givenUrl) => (givenUrl.includes(url)) ? "active" : "";
+%>
+<div class="menu ">
+
+    <a href="/profile" onclick="" class="no-bs">
+        <div class="d-flex align-items-center">
+            <div class="mr-2 pl-0">
+                        <span class="fa-stack nav-stack fa-1x" style="font-size: 1.3em;">
+                                  <i class="fas fa-circle fa-stack-2x"></i>
+                                  <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+                                </span>
+            </div>
+            <div>
+                <div class="mb-0 pb-0 align-items-center">
+                    <strong>
+                        <%= user.firstname %> <%= user.lastname %>
+                    </strong>
+                </div>
+                <div class="text-muted mt-0 pt-0"><%= (user.account === 'student') ? "Student" : (user.account === 'instructor') ? "Instructor" : "Administrator" %></div>
+            </div>
+        </div>
+    </a>
+    <hr>
+    <ul class="list-group menu-list">
+        <%- include("menu-item.ejs", {name: "Dashboard", target: "/", icon: "fas fa-home"}) %>
+        <%- include("menu-item.ejs", {name: "Workspace", target: "/workspace", icon: "fas fa-tools"}) %>
+    </ul>
+    <hr>
+
+    <ul class="list-group menu-list">
+        <%- include("menu-item.ejs", {name: "Assignments", target: "/assignments", icon: "fas fa-file-invoice"}) %>
+        <%- include("menu-item.ejs", {name: "Courses", target: "/courses", icon: "fas fa-users-cog"}) %>
+        <%- include("menu-item.ejs", {name: "Templates", target: "/templates", icon: "fas fa-file-archive"}) %>
+    </ul>
+    <hr>
+
+
+    <div class="menu-bottom">
+        <div class="d-flex justify-content-between">
+            <div>
+                <div class="align-items-center">
+                    <span data-toggle="tooltip" data-placement="top" title="Container: "><i
+                                class="fas fa-code"></i>&nbsp;Turnin v</span><br>
+                    <span class="text-muted">Copyright &copy; <a href="https://www.bradenn.com"
+                                                                 class="no-bs">BN Media</a> <%= new Date().getFullYear() %></span>
+                </div>
+            </div>
+            <div class="">
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

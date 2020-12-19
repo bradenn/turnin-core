@@ -8,12 +8,20 @@ const userSchema = mongoose.Schema({
         unique: true
     },
     email: {
-        type: Number,
+        type: String,
         required: true,
         unique: true
     },
+    firstname: {
+        type: String,
+        required: true
+    },
+    lastname: {
+        type: String,
+        required: true
+    },
     password: {
-        type: Number,
+        type: String,
         required: true
     },
     account: {
@@ -25,19 +33,20 @@ const userSchema = mongoose.Schema({
     dateCreated: {type: Date, default: Date.now}
 });
 
-userSchema.statics.authenticate = (user, password) => {
+userSchema.statics.authenticate = (username, password) => {
     return new Promise((resolve, reject) => {
-        User.findOne({"user": user}).exec().then(user => {
+        User.findOne({"username": username}).exec().then(user => {
             if (!user) {
                 let err = new Error('An account could not be found using that email/password.');
                 err.status = 401;
-                reject(err);
+                return reject(err);
             }
             verifyHash(password, user.password).then(() => {
-                resolve(user);
-            }).catch(() => {
+                return resolve(user);
+            }).catch((er) => {
+
                 let err = new Error("An account could not be found using that email/password.");
-                reject(err);
+                return reject(err);
             });
         });
     });

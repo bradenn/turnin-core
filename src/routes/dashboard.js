@@ -6,6 +6,8 @@ let router = Router();
 
 router.get('/',
     async (req, res, next) => {
+
+
         res.render('dashboard');
     });
 
